@@ -36,6 +36,9 @@ const getSingleDivision = async (slug: string) => {
   const division = await Division.findOne({ slug });
 
   return {
+    statusCode: 200,
+    success: true,
+    message: "Single division fetched",
     data: division,
   };
 };
